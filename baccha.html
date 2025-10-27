@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLANG EXPLOSION Incoming! 💣</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        /* General Setup */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #000000; /* Black background for drama */
+            font-family: 'Bangers', cursive;
+            color: #ffffff; /* Default text white */
+            overflow: hidden; /* Hide scrollbar */
+        }
+
+        /* --- STAGE 1: THE POPUP (Initial View) --- */
+        #prank-popup {
+            background-color: #000000;
+            border: 5px solid #ffff00; /* Yellow border */
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 40px #ff00ff, 0 0 20px #ffff00; /* Neon glow effect */
+            z-index: 1000;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #popup-header {
+            color: #ffff00; /* Yellow text for the top header */
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            animation: pulse-glow 1.5s infinite alternate;
+        }
+
+        #popup-simple-text {
+            color: #ffffff; /* White text for the simple text */
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            margin-bottom: 30px;
+        }
+
+        #explosion-button {
+            background-color: #ffff00; /* Yellow background */
+            color: #000000; /* Black text */
+            border: 3px solid #000000;
+            padding: 15px 30px;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-family: 'Bangers', cursive;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ff00ff;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #explosion-button:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 0 20px #ff00ff, 0 0 10px #ffff00;
+        }
+
+        /* Keyframes for the header pulse */
+        @keyframes pulse-glow {
+            0% { text-shadow: 0 0 5px #ff00ff; }
+            100% { text-shadow: 0 0 15px #ffff00; }
+        }
+
+        /* --- STAGE 2: THE INSTRUCTIONS & CODE REVEAL --- */
+        #explosion-content {
+            display: none; /* Hidden by default */
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        #instruction-text {
+            color: #ffff00; /* Yellow for instructions */
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #code-block {
+            background-color: #1a1a1a; /* Darker background for code */
+            padding: 20px;
+            border: 2px dashed #ff00ff;
+            border-radius: 10px;
+            overflow-x: auto; /* Ensure code is viewable on small screens */
+            max-height: 70vh; /* Prevent it from taking up too much vertical space */
+        }
+
+        /* Styling for the pre and code tags */
+        pre {
+            margin: 0;
+            white-space: pre-wrap; /* Allows the long lines of code to wrap */
+        }
+        code {
+            color: #cccccc; /* Light gray for code */
+            font-family: monospace; /* Monospace font for code readability */
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="prank-popup">
+        <div id="popup-header">GET READY FOR EXPLOSION! 💥</div>
+        <div id="popup-simple-text">The full explosion requires one final click...</div>
+        <button id="explosion-button" onclick="revealCode()">CLICK ME! 😈</button>
+    </div>
+
+    <div id="explosion-content">
+        <div id="instruction-text">
+            🤯 **COPY CODE! OPEN GOOGLE SEARCH "HTML ONLINE COMPILER"!** 🤯<br>
+            **1.** REMOVE existing code in the `index.html` file.<br>
+            **2.** PASTE my code, then click **RUN** and see the explosion! 🤭
+        </div>
+        <div id="code-block">
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;  
+&lt;head&gt;  
+    &lt;meta charset="UTF-8"&gt;  
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;  
+    &lt;title&gt;Dynamic Slang Explosion&lt;/title&gt;
+    &lt;!-- Using the Bangers font for a fun, comic-book style --&gt;  
+&lt;link href="https://fonts.googleapis.com/css2?family=Bangers&amp;display=swap" rel="stylesheet"&gt;  
+  
+&lt;style&gt;  
+    /* CSS STYLING */  
+    body {  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        min-height: 100vh;  
+        margin: 0;  
+        background-color: #000000; /* Black Background */  
+        font-family: 'Bangers', cursive;  
+        overflow: hidden;  
+        position: relative;  
+    }  
+
+    /* --- BACKGROUND STYLES --- */  
+    #background-words {  
+        position: fixed;  
+        top: 0;  
+        left: 0;  
+        width: 100%;  
+        height: 100%;  
+        z-index: 0;   
+        pointer-events: none;  
+    }  
+
+    .bg-slang {  
+        position: absolute;  
+        font-size: clamp(1rem, 4vw, 3rem);  
+        /* Base color is now a more visible white/dark white */  
+        color: rgba(255, 255, 255, 0.7);   
+        transition: all 0.5s ease-in-out;  
+        white-space: nowrap;  
+        animation: background-glow-pulse 5s infinite alternate ease-in-out;  
+    }  
+
+    /* Keyframes for the background text glow and scale pulse   
+       Size is BIG at 0% and 100%, and SMALL at 50%. Opacity ensures visibility. */  
+    @keyframes background-glow-pulse {  
+        0% {  
+            transform: scale(1.1); /* BIG */  
+            opacity: 0.4; /* More visible when big */  
+            text-shadow: 0 0 15px #ffff00, 0 0 25px #ff00ff; /* Bright Glow */  
+        }  
+        50% {  
+            transform: scale(0.9); /* SMALL */  
+            opacity: 0.2; /* Still visible when small */  
+            text-shadow: 0 0 5px #0000ff; /* Dim Glow */  
+        }  
+        100% {  
+            transform: scale(1.1); /* BIG */  
+            opacity: 0.4; /* More visible when big */  
+            text-shadow: 0 0 15px #ffff00, 0 0 25px #ff00ff; /* Bright Glow */  
+        }  
+    }  
+      
+    /* --- CENTER ANIMATION STYLES --- */  
+    #animation-container {  
+        font-size: clamp(5rem, 15vw, 10rem);   
+        perspective: 1000px;  
+        z-index: 10;  
+        position: relative;  
+    }  
+
+    #animated-text {  
+        display: inline-block;  
+        user-select: none;  
+        color: #ffff00; /* Yellow Base Color */  
+          
+        opacity: 0;  
+        transform: scale(0.5) rotate(0deg);  
+        filter: brightness(100%);  
+    }  
+
+    .hidden {  
+        visibility: hidden !important;   
+        opacity: 0;  
+    }  
+
+    .animate {  
+        /* Explosive animation timing */  
+        animation: bendi-super-pop 1.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;  
+    }  
+
+    /* KEYFRAMES: The 'Super Pop, Bounce, and Spin' Effect */  
+    @keyframes bendi-super-pop {  
+        0% {  
+            opacity: 0;  
+            transform: scale(0.2) rotate(0deg);  
+            text-shadow: none;  
+        }  
+          
+        /* EXPLOSION: Pop in with massive scale overshoot and rotation */  
+        10% {  
+            opacity: 1;   
+            transform: scale(1.3) rotate(15deg);   
+            /* Bright, multi-layered neon glow - centered on yellow */  
+            text-shadow:   
+                0 0 10px #ffff00,   
+                0 0 20px #ffcc00,   
+                0 0 30px #ff8c00;   
+        }  
+          
+        /* BOUNCE: Settle down */  
+        25% {  
+            transform: scale(1.0) rotate(-5deg);  
+            text-shadow: 0 0 8px #ffff00, 0 0 16px #ffcc00;  
+        }  
+
+        /* HOLD: Subtle flicker and shake */  
+        40%, 60% {  
+            transform: scale(1.0) rotate(2deg);  
+            text-shadow: 0 0 12px #ffcc00, 0 0 25px #ff00ff; /* Pink/Yellow flicker */  
+        }  
+
+        /* EXIT: Zoom off screen while spinning rapidly */  
+        90% {  
+            opacity: 0.9;  
+            transform: scale(1.0) rotate(30deg);  
+        }  
+        100% {  
+            opacity: 0;   
+            transform: scale(0.1) rotate(360deg) translateY(-200px);   
+            text-shadow: none;  
+        }  
+    }  
+&lt;/style&gt;
+
+&lt;/head&gt;  
+&lt;body&gt; &lt;!-- Container for the pulsing, tilted background text --&gt;  
+&lt;div id="background-words"&gt;  
+    &lt;!-- Words are injected here by JavaScript --&gt;  
+&lt;/div&gt;  
+
+&lt;!-- Container for the main animation, placed on top --&gt;  
+&lt;div id="animation-container"&gt;  
+    &lt;span id="animated-text" class="hidden"&gt;BENDI! 😜&lt;/span&gt;  
+&lt;/div&gt;  
+
+&lt;script&gt;  
+    // JAVASCRIPT LOGIC  
+    document.addEventListener('DOMContentLoaded', () => {  
+        const animatedText = document.getElementById('animated-text');  
+        const backgroundContainer = document.getElementById('background-words');  
+          
+        // Slang list  
+        const slangWords = ['PAGAL', 'BENDI', 'HUGLI', 'GELCHAPI', 'CHACUNDARI'];   
+        const totalWordsToGenerate = 150;   
+
+        /** * Dynamically generates and places the background words randomly.  
+         */  
+        function generateBackground() {  
+            for (let i = 0; i &lt; totalWordsToGenerate; i++) {  
+                const word = document.createElement('span');  
+                  
+                word.textContent = slangWords[i % slangWords.length];  
+                word.className = 'bg-slang';  
+
+                // Random placement and rotation  
+                word.style.top = `${Math.random() * 100}vh`;  
+                word.style.left = `${Math.random() * 100}vw`;  
+                  
+                const rotation = Math.floor(Math.random() * 180) - 90;   
+                word.style.transform = `rotate(${rotation}deg)`;  
+                  
+                // Stagger the animation start for a more dynamic pulse  
+                word.style.animationDelay = `${Math.random() * 5}s`;   
+                  
+                backgroundContainer.appendChild(word);  
+            }  
+        }  
+
+        /** * Starts the main central animation.  
+         */  
+        function startAnimation() {  
+            animatedText.classList.remove('hidden');  
+            animatedText.classList.add('animate');  
+        }  
+
+        /** * Resets the main animation and schedules the next loop.  
+         */  
+        function resetAndLoop() {  
+            animatedText.classList.remove('animate');  
+            animatedText.classList.add('hidden');  
+              
+            // Restart the cycle after a minimal delay  
+            setTimeout(startAnimation, 50);   
+        }  
+
+        // Set up the listener to automatically loop when the main animation finishes  
+        animatedText.addEventListener('animationend', resetAndLoop);  
+
+        // Initial calls  
+        generateBackground();   
+        startAnimation();   
+    });  
+&lt;/script&gt;
+
+&lt;/body&gt;  
+&lt;/html&gt;
+            </code></pre>
+        </div>
+    </div>
+
+    <script>
+        function revealCode() {
+            // 1. Hide the initial popup with a fade effect
+            const popup = document.getElementById('prank-popup');
+            popup.style.opacity = '0';
+            
+            // 2. Wait for the fade to complete, then hide it and show the code
+            setTimeout(() => {
+                popup.style.display = 'none';
+                document.getElementById('explosion-content').style.display = 'block';
+            }, 500); // 500ms matches the CSS transition time
+        }
+    </script>
+</body>
+</html>
+
